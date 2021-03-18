@@ -1,40 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form</title>
-</head>
-<body>
-    <form>
-<label>First Name</label>
-        <input type="text" minlength="4" maxlength="10"> <br>
+  </head>
+  <body>
+    <form autocomplete="on">
 
-        <label>Age</label>
-        <input type="number" min="18"> <br>
-<label >Email</label>
-        <input type="email"> <br>
+        <fieldset>
+            <legend>Registration Form</legend>
+      <label>First Name</label>
+      <input type="text" minlength="4" maxlength="10" placeholder="First Name" /> <br />
 
-        <label>Gender</label>
-        <input type="radio" name="gender">
-        <label>Male</label>
+      <label>Age</label>
+      <input type="number" min="18" /> <br />
+      <label>Email</label>
+      <input type="email"  autocomplete="off" /> <br />
 
-        <input type="radio" name="gender">
-        <label>Female</label>
+      <label for="password">Password</label>
+      <input type="password" />
 
+      <label>Gender</label>
+      <input type="radio" name="gender" />
+      <label>Male</label>
 
-        <label>Languages</label>
-        <input type="checkbox">
-        <label>English</label>
+      <input type="radio" name="gender" />
+      <label>Female</label>
 
-        <input type="checkbox">
-        <label>Marathi</label>
+      <label>Languages</label>
+      <input type="checkbox" />
+      <label>English</label>
 
-        <input type="checkbox">
-        <label>Hindi</label>
+      <input type="checkbox" />
+      <label>Marathi</label>
 
-        <input type="submit">
+      <input type="checkbox" />
+      <label>Hindi</label>
+
+      <label for="date">Date</label>
+      <input id="date" type="date" /> <br />
+
+      <label for="time">Time</label>
+      <input type="time" /> <br />
+
+      <label for="date-time">Select date and time for boarding</label>
+
+      <input id="date-time" type="datetime-local" /><br />
+
+      <label for="phone">Telephone Number</label>
+      <input id="phone" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="738-393-3446">
+
+<label for="marks-obtained">Marks Obtained</label>
+      <input id="marks-obtained" type="text">
+      <label for="marks-obtained">Marks Out of</label>
+      <input type="text" value="100" disabled> <br>
+
+      <select>
+<optgroup label="Backend">
+    <option value="java">Java</option>
+    <option value="spring">Spring</option>
+    <option value="database">Database</option>
+</optgroup>
+
+<optgroup label="Frontend">
+    <option value="java">HTML</option>
+    <option value="spring">CSS</option>
+    <option value="database">Javascript</option>
+</optgroup>
+
+         
+      </select>
+      <button type="submit">Register</button>
+      <input type="submit" value="Login" />
+
+    </fieldset>
     </form>
-</body>
+  </body>
 </html>
