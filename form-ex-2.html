@@ -1,28 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
 </head>
+
 <body>
-    
+
+
+
     <form autocomplete="on">
 
+        <fieldset>
+
+            <legend>Registration Form</legend>
+
         <label for="fname">First Name</label>
-        <input id="fname" minlength="6" maxlength="10" type="text">
+        <input size="10" id="fname" minlength="6" maxlength="10" type="text" placeholder="First Name"> <br>
 
 
         <label for="age">Age</label>
-        <input id="age" min="18" max="65" type="number">
+        <input id="age" min="18" max="65" type="number" step="5"> <br>
 
         <label for="email">Email</label>
-        <input autocomplete="off" id="email" type="email">
+        <input autocomplete="off" id="email" type="email" placeholder="your@example.com"> <br>
 
-        <input type="file">
 
+        <input type="password">
+        <input type="file" accept="image/jpg, image/gif" multiple> <br>
+
+        
+        <!-- To create a dropdown we use select input element 
+        To create a list we use option element -->
+        <select name="tech" id="tech" multiple>
+            <option value="java">Java</option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+        </select>
+
+
+        <!-- optgroup element is used to create a group of lists in dropdown -->
+        <select name="" id="">
+            <optgroup label="Backend">
+                <option value="java">Java</option>
+                <option value="spring">Spring</option>
+                <option value="db">Database</option>
+            </optgroup>
+
+            <optgroup label="Frontend">
+                <option value="javascript">Javascript</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+            </optgroup>
+        </select> <br>
+
+        <input type="date"> <br>
+
+        <input type="time">
+
+        <input type="datetime-local">
+
+        <label>Gender</label>
+
+        <input name="gender" type="radio" >
+        <label>Male</label>
+
+        <input name="gender" type="radio">
+        <label>Female</label> <br>
+
+<label>Languages</label>
+        <input type="checkbox" checked>
+        <label>English</label>
+
+        <input type="checkbox">
+        <label>Marathi</label>
+
+        <input type="checkbox"checked>
+        <label>Hindi</label>
+
+
+        
+        <!-- To create a datalist we use input element type text 
+        and datalist element with option element to create a list 
+    inside input element use list attribute and for datalist element use id attribute 
+list attribute value and datalist id attribute value should be same-->
+        <input type="text" list="city">
+        <datalist id="city">
+            <option>Pune</option>
+            <option>Mumbai</option>
+            <option>Banglore</option>
+        </datalist> <br>
+
+<label>Marks Obtained</label>
+        <input type="text" placeholder="Marks Obtained">
+
+
+<label>Marks Out of</label>
+<input type="text" value="100" disabled>
+
+<input type="hidden">
+
+<input type="month">
+
+<input type="range">
+
+<input type="reset"> 
+
+<input type="search">
+
+<input type="tel" pattern="[0-9]{3} [0-9]{3} [0-9]{4}">
+
+
+
+
+<input type="image" src="./images/img_submit.gif">
         <input type="submit">
+
+    </fieldset>
     </form>
 </body>
+
 </html>
