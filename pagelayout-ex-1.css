@@ -1,0 +1,71 @@
+/* selectors - what are selectors
+
+grouping selector */
+
+h3,h1,li{
+    display: inline;
+}
+
+header{
+    text-align: center;
+}
+
+h1{
+    color: red;
+}
+
+li{
+    font-size: 18px;
+}
+
+ul{
+    margin-top: 20px;
+    margin-bottom: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    margin: 15px 20px 25px;
+
+
+    padding-left: 10px ;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+
+    padding: 10px 20px 15px;
+}
+
+div{
+    border: 1px solid black;
+}
+
+
+
+.one{
+    background-color: aqua;
+}
+
+
+/* Id names are always unique 
+Multiple elements can have same class name*/
+
+#codekul{
+    background-color: blue;
+}
+
+/* transform property in css 
+animation ins css */
+
+
+/* CSS
+
+Basic CSS Properties
+CSS Box model 
+Flexbox 
+Grid 
+Transform 
+Transition 
+animation
+advance CSS properties */
+
+
