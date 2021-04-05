@@ -1,45 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
     <style>
-        .container{
-            display: flex;
-            flex-direction: row;
-            /* flex-wrap: wrap-reverse; */
+      .container {
+        display: flex;
+        flex-direction: row;
+        /* flex-wrap: wrap-reverse; */
 
-            justify-content: center;
+        /* justify-content: center; */
 
-
-            /* justify keyword properties are used to position an element in a horizontal direction 
+        /* justify keyword properties are used to position an element in a horizontal direction 
             justify-content
             justify-items
             justify-self
             */
-            
 
-            align-items: center;
+        /* align-items: center; */
 
-
-            /* what is the difference between align-items and align-content
+        /* what is the difference between align-items and align-content
             justify-content and justify-items as well */
 
-             /* align keyword properties are used to position an element in a vertical direction 
+        /* align keyword properties are used to position an element in a vertical direction 
              align-self
              align-content
              align-items
              */
 
-            height: 500px;
-            border: solid 2px blue;
-        }
+        height: 500px;
+        border: solid 2px blue;
+      }
 
-
-        /* flex-wrap: wrap --> All the flex-items are wrapped. Whatever the elements are there which cannot fit 
+      /* flex-wrap: wrap --> All the flex-items are wrapped. Whatever the elements are there which cannot fit 
         in a single row moves to next row or next line 
         The flex-items adjust itself according to its viewport if there extra is extra flex item which 
         cannot be added in a single row will move on a next line
@@ -49,7 +45,7 @@
         flex wrap property will be implemented for it also Just it will position of elements will be
         from bottom to top*/
 
-        /* flex-direction : row --> It will move from left to right
+      /* flex-direction : row --> It will move from left to right
 
         flex-direction : row-reverse --> It will move from right to :left
 
@@ -57,45 +53,57 @@
 
         flex-direction : column-reverse --> It will move from bottom to top */
 
-
-        /* Whenever we are using display flex property we can apply flex-direction to 
+      /* Whenever we are using display flex property we can apply flex-direction to 
         element only one (out of four) 
         It can be row, row-reverse, column or column-reverse 
         We cannot select more than one flex-direction value for an element*/
 
-
-        /* whenever we apply display: flex property all elements inside flexbox container 
+      /* whenever we apply display: flex property all elements inside flexbox container 
         moves in horizontal direction and behave as a inline element because of flex-direction : row
         which is by default
         
         
         For flex-direction: column flex items behave as a normal block level element */
 
-        .flex-items{
-            border: solid 2px red;
-            margin: 10px;
+      .flex-items {
+        border: solid 2px red;
+        margin: 10px;
 
-            width: 100px;
-        }
+        width: 300px;
+      }
+
+      img{
+        width: 300px;
+      }
     </style>
-</head>
-<body>
-    
-
+  </head>
+  <body>
     <div class="container">
-<div class="flex-items">One</div>
-<div class="flex-items">Two</div>
-<div class="flex-items">Three</div>
-<div class="flex-items">Four</div>
+      <div class="flex-items">
+        <img src="../images/1.jpg" alt="" />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
+          repudiandae aut expedita delectus cum, excepturi cumque inventore ut
+          officia, dolores impedit quod. Minima sit possimus reiciendis nemo
+          laudantium dolore pariatur.
+        </p>
+      </div>
+      <div class="flex-items">
+        <img src="../images/3.jpg" alt="" />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum porro
+          fugit ipsa nulla doloremque quam veniam, quas iste ipsum quasi natus
+          deleniti voluptatem animi quo distinctio. Saepe blanditiis delectus
+          corporis.
+        </p>
+      </div>
+      <div class="flex-items">Three</div>
+      <div class="flex-items">Four</div>
 
-
-
-<!-- <div class="flex-items">One</div>
+      <!-- <div class="flex-items">One</div>
 <div class="flex-items">Two</div>
 <div class="flex-items">Three</div>
 <div class="flex-items">Four</div> -->
-
-
     </div>
-</body>
+  </body>
 </html>
