@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .main-container {
+        display: flex;
+        flex-direction: row;
+      }
+
+      /* descendant selector - We can target element by the family tree structure */
+      .column-1 img {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+      }
+
+      .inner-flex-items img{
+          height: 100px;
+          width: 100px;
+      }
+
+      /* align-content property works only and only when we use flex-wrap property */
+
+      .flex-items {
+        display: flex;
+        flex-direction: row;
+        border: solid 2px black;
+        align-items: center;
+      }
+
+      .column-2 {
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+      }
+
+      .outer-flex-items{
+          display: flex;
+          flex-direction: row;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="column-1">
+        <div class="flex-items">
+          <img src="../images/1.jpg" alt="" />
+          <span>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          </span>
+        </div>
+        <div class="flex-items">
+          <img src="../images/1.jpg" alt="" />
+          <span>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          </span>
+        </div>
+        <div class="flex-items">
+          <img src="../images/1.jpg" alt="" />
+          <span>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          </span>
+        </div>
+        <div class="flex-items">
+          <img src="../images/1.jpg" alt="" />
+          <span>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          </span>
+        </div>
+        <div class="flex-items">
+          <img src="../images/1.jpg" alt="" />
+          <span>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          </span>
+        </div>
+      </div>
+
+      <div class="column-2">
+        <div class="outer-flex-items">
+          <img
+            style="height: 300px; width: 500px"
+            src="../images/2.jpg"
+            alt=""
+          />
+        </div>
+        <div class="outer-flex-items">
+          <div class="inner-flex-items">
+            <img src="../images/3.jpg" alt="" />
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta
+             
+            </p>
+          </div>
+          <div class="inner-flex-items">
+            <img src="../images/3.jpg" alt="" />
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta
+             
+            </p>
+          </div>
+          <div class="inner-flex-items">
+            <img src="../images/3.jpg" alt="" />
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta
+              
+            </p>
+          </div>
+        </div>
+        <div class="outer-flex-items">
+          <div class="inner-flex-items">
+            <img src="../images/3.jpg" alt="" />
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta
+             
+            </p>
+          </div>
+          <div class="inner-flex-items">
+            <img src="../images/3.jpg" alt="" />
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta
+            
+            </p>
+          </div>
+          <div class="inner-flex-items">
+            <img src="../images/3.jpg" alt="" />
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta
+             
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
