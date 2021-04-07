@@ -15,7 +15,7 @@
       /* descendant selector - We can target element by the family tree structure */
       .column-1 img {
         height: 50px;
-        width: 50px;
+        max-width: 50px;
         border-radius: 50%;
       }
 
@@ -27,7 +27,7 @@
       /* align-content property works only and only when we use flex-wrap property */
 
       .flex-items {
-        display: flex;
+        /* display: flex; */
         flex-direction: row;
         border: solid 2px black;
         align-items: center;
@@ -43,6 +43,16 @@
           display: flex;
           flex-direction: row;
       }
+
+
+      .flex-items img {
+         
+      }
+      
+.flex-items > img{
+
+}
+
     </style>
   </head>
   <body>
