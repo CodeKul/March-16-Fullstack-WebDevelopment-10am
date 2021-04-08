@@ -1,14 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+
+    <style>
+        section.sports {
+            display: flex;
+        }
+
+        li {
+            display: inline;
+        }
+
+        .sports img {
+            height: 300px;
+            width: 450px;
+            margin: 10px 10px 15px;
+        }
+
+        nav {
+            text-align: center;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+
+        section.technology {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+        }
+
+
+        .technology .flex-items{
+            display: flex;
+            flex-direction: row;
+        }
+
+
+        .technology .flex-items>img{
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+        }
+
+
+/* Attribute selector 
+syntax [attribute name]
+[attribute name = "value"]
+element name [attribute name] */
+
+        [href]{
+            color: crimson;
+        }
+
+        [title]{
+            color: pink;
+        }
+
+        p[title]{
+            background-color: darkgoldenrod;
+        }
+
+        [title="paragraph"]{
+            color: darkmagenta;
+        }
+
+        [src]{
+            border: 5px solid red;
+        }
+
+
+        /* a[href^="https"]{
+            color: darkmagenta;
+            background-color: darkorange;
+        } */
+
+
+        [href$=".in"]{
+            background-color: darkred;
+            color: darkturquoise;
+        }
+
+        [class~=Heading i]{
+            background-color: greenyellow;
+        }
+    </style>
 </head>
+
 <body>
-    
-<!-- CSS Selectors 
+
+    <!-- CSS Selectors 
 Class Selector 
 ID selector 
 Attribute Selector 
@@ -17,5 +104,108 @@ Combinators
 Descendant Selector 
 Child Selector -->
 
+
+    <header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Blog</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <h3 class="sports heading">
+            <div>
+                <ol>
+                    <li>Cricket</li>
+                    <li>Football</li>
+                    <li>Racing</li>
+                    <li>Athletics</li>
+                </ol>
+            </div>
+        </h3>
+        <section class="sports">
+
+            <div class="flex-items">
+                <img src="../images/3.jpg">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam dolore quas ipsum praesentium commodi
+                    doloribus aut voluptate est quidem ex, sapiente fugit porro voluptatum explicabo. Laboriosam,
+                    minima? Veniam, expedita aliquid.</p>
+            </div>
+            <div class="flex-items">
+                <img src="../images/3.jpg">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam dolore quas ipsum praesentium commodi
+                    doloribus aut voluptate est quidem ex, sapiente fugit porro voluptatum explicabo. Laboriosam,
+                    minima? Veniam, expedita aliquid.</p>
+            </div>
+            <div class="flex-items">
+                <img src="../images/3.jpg">
+                <p title="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam dolore quas ipsum praesentium commodi
+                    doloribus aut voluptate est quidem ex, sapiente fugit porro voluptatum explicabo. Laboriosam,
+                    minima? Veniam, expedita aliquid.</p>
+
+                    <a title="google" href="https://www.google.com">Visit Google</a>
+
+                    <a href="http://www.codekul.com">Visit Codekul</a>
+
+
+                    <a href="https://www.indiatoday.in/">Visit India Today</a>
+            </div>
+
+
+
+
+
+
+        </section>
+
+
+
+
+
+
+        <section class="technology">
+
+            <div class="flex-items">
+                <img src="../images/4.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta mollitia aperiam maxime officiis
+                    </p>
+
+            </div>
+            <div class="flex-items">
+                <img src="../images/4.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta mollitia aperiam maxime officiis
+                   </p>
+            </div>
+            <div class="flex-items">
+                <img src="../images/4.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta mollitia aperiam maxime officiis
+                    </p>
+            </div>
+            <div class="flex-items">
+                <img src="../images/4.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta mollitia aperiam maxime officiis
+                    </p>
+            </div>
+
+        </section>
+
+
+        <section class="politics">
+
+        </section>
+
+
+        <section class="entertainment">
+
+        </section>
+    </main>
+
 </body>
+
 </html>
