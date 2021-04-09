@@ -1,100 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-
     <style>
-        section.sports {
-            display: flex;
-        }
+      section.sports {
+        display: flex;
+      }
 
-        li {
-            display: inline;
-        }
+      li {
+        display: inline;
+      }
 
-        .sports img {
-            height: 300px;
-            width: 450px;
-            margin: 10px 10px 15px;
-        }
+      .sports img {
+        height: 300px;
+        width: 450px;
+        margin: 10px 10px 15px;
+      }
 
-        nav {
-            text-align: center;
-            font-size: 18px;
-            font-weight: 700;
-        }
+      nav {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 700;
+      }
 
+      section.technology {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+      }
 
-        section.technology {
-            display: flex;
-            flex-direction: column;
-            width: 300px;
-        }
+      .technology .flex-items {
+        display: flex;
+        flex-direction: row;
+      }
 
+      .technology .flex-items > img {
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+      }
 
-        .technology .flex-items{
-            display: flex;
-            flex-direction: row;
-        }
-
-
-        .technology .flex-items>img{
-            height: 80px;
-            width: 80px;
-            border-radius: 50%;
-        }
-
-
-/* Attribute selector 
+      /* Attribute selector 
 syntax [attribute name]
 [attribute name = "value"]
 element name [attribute name] */
 
-        [href]{
-            color: crimson;
-        }
+      /* [href] {
+        color: crimson;
+      } */
 
-        [title]{
-            color: pink;
-        }
+      [title] {
+        color: pink;
+      }
 
-        p[title]{
-            background-color: darkgoldenrod;
-        }
+      p[title] {
+        background-color: darkgoldenrod;
+      }
 
-        [title="paragraph"]{
-            color: darkmagenta;
-        }
+      [title="paragraph"] {
+        color: darkmagenta;
+      }
 
-        [src]{
-            border: 5px solid red;
-        }
+      [src] {
+        border: 5px solid red;
+      }
 
-
-        /* a[href^="https"]{
+      /* a[href^="https"]{
             color: darkmagenta;
             background-color: darkorange;
         } */
 
+      /* [href$=".in"] {
+        background-color: darkred;
+        color: darkturquoise;
+      } */
 
-        [href$=".in"]{
-            background-color: darkred;
-            color: darkturquoise;
-        }
-
-        [class~=Heading i]{
+      /* [class~=Heading i]{
             background-color: greenyellow;
-        }
+        } */
+
+      /* vertical attribute selector - [attribute-name |= "Value"]
+The value can be exactly also it can considered as the separate word which is separated by hyphen
+And this should be the first word, and then after that hyphen */
+      [class|="sports" i] {
+        background-color: chocolate;
+      }
+
+      [type="email"] {
+        border: solid 2px red;
+      }
+
+      h3 ~ ul {
+        background-color: cornflowerblue;
+      }
+
+      h3+ul{
+          background-color: darkgreen;
+      }
+
+
+
+/* pseudo class selector - We can target any element according to its some specific state or event
+and pseudo class selector we use colon --> : 
+syntax -> element:state{
+    css statements
+} */
+      li:last-child{
+          background-color: darkred;
+
+      }
+
+
+      li:first-child{
+          background-color: darkred;
+
+      }
+
+
+/* It will target such li elemnt which is nth child in its parent element */
+      li:nth-child(3){
+          background-color: rgb(67, 139, 0);
+
+      }
+
+
+      a:link{
+          color: deeppink;
+      }
+
+      a:visited{
+          color: gold;
+      }
+
+      a:hover{
+          font-size: larger;
+          background-color: greenyellow;
+          color: indigo;
+      }
+
+
+
+      /* Sibling Selectors - There are 2 types of Sibling selectors 
+        1.General Sibling selector 
+        2.Adjacent Sibling Selector */
     </style>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <!-- CSS Selectors 
 Class Selector 
 ID selector 
@@ -104,108 +160,143 @@ Combinators
 Descendant Selector 
 Child Selector -->
 
-
     <header>
-        <nav>
-            <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Blog</li>
-                <li>Contact</li>
-            </ul>
-        </nav>
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Blog</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
     </header>
 
-
     <main>
+      <h3 class="sports-heading">
+        <div>
+          <ol>
+            <li>Cricket</li>
+            <li>Football</li>
+            <li>Racing</li>
+            <li>Athletics</li>
+          </ol>
+        </div>
+      </h3>
+      <section class="sports">
+        <div class="flex-items">
+          <img src="../images/3.jpg" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam dolore
+            quas ipsum praesentium commodi doloribus aut voluptate est quidem
+            ex, sapiente fugit porro voluptatum explicabo. Laboriosam, minima?
+            Veniam, expedita aliquid.
+          </p>
+        </div>
+        <div class="flex-items">
+          <img src="../images/3.jpg" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam dolore
+            quas ipsum praesentium commodi doloribus aut voluptate est quidem
+            ex, sapiente fugit porro voluptatum explicabo. Laboriosam, minima?
+            Veniam, expedita aliquid.
+          </p>
+        </div>
+        <div class="flex-items">
+          <img src="../images/3.jpg" />
+          <p title="paragraph">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam dolore
+            quas ipsum praesentium commodi doloribus aut voluptate est quidem
+            ex, sapiente fugit porro voluptatum explicabo. Laboriosam, minima?
+            Veniam, expedita aliquid.
+          </p>
 
-        <h3 class="sports heading">
-            <div>
-                <ol>
-                    <li>Cricket</li>
-                    <li>Football</li>
-                    <li>Racing</li>
-                    <li>Athletics</li>
-                </ol>
-            </div>
-        </h3>
-        <section class="sports">
+          <a title="google" href="https://www.google.com">Visit Google</a>
 
-            <div class="flex-items">
-                <img src="../images/3.jpg">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam dolore quas ipsum praesentium commodi
-                    doloribus aut voluptate est quidem ex, sapiente fugit porro voluptatum explicabo. Laboriosam,
-                    minima? Veniam, expedita aliquid.</p>
-            </div>
-            <div class="flex-items">
-                <img src="../images/3.jpg">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam dolore quas ipsum praesentium commodi
-                    doloribus aut voluptate est quidem ex, sapiente fugit porro voluptatum explicabo. Laboriosam,
-                    minima? Veniam, expedita aliquid.</p>
-            </div>
-            <div class="flex-items">
-                <img src="../images/3.jpg">
-                <p title="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam dolore quas ipsum praesentium commodi
-                    doloribus aut voluptate est quidem ex, sapiente fugit porro voluptatum explicabo. Laboriosam,
-                    minima? Veniam, expedita aliquid.</p>
+          <a href="http://www.codekul.com">Visit Codekul</a>
 
-                    <a title="google" href="https://www.google.com">Visit Google</a>
+          <a href="https://www.indiatoday.in/">Visit India Today</a>
 
-                    <a href="http://www.codekul.com">Visit Codekul</a>
+          <input type="text" />
 
+          <input type="email" />
+        </div>
+      </section>
 
-                    <a href="https://www.indiatoday.in/">Visit India Today</a>
-            </div>
+      <section class="technology">
+        <div class="flex-items">
+          <img src="../images/4.jpg" alt="" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+            mollitia aperiam maxime officiis
+          </p>
+        </div>
+        <div class="flex-items">
+          <img src="../images/4.jpg" alt="" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+            mollitia aperiam maxime officiis
+          </p>
+        </div>
+        <div class="flex-items">
+          <img src="../images/4.jpg" alt="" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+            mollitia aperiam maxime officiis
+          </p>
+        </div>
+        <div class="flex-items">
+          <img src="../images/4.jpg" alt="" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+            mollitia aperiam maxime officiis
+          </p>
+        </div>
+      </section>
 
+      <section class="politics">
+        <div class="content">
+          <h3>News-Politics</h3>
+          <ul>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+          </ul>
 
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio
+            dolore blanditiis pariatur quasi, optio deleniti. Esse sapiente
+            doloremque asperiores impedit quo at sit aperiam veniam dolorem
+            similique voluptatem, itaque atque!
+          </p>
 
+          <ul>
+            <li>Four</li>
+            <li>Five</li>
+            <li>Six</li>
+          </ul>
 
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aut
+            accusantium cum, architecto similique impedit incidunt praesentium
+            magni, molestias perferendis facilis provident ducimus, eligendi quo
+            amet nemo id quasi tenetur!
+          </p>
 
+          <ul>
+            <li>Seven</li>
+            <li>Eight</li>
+            <li>Nine</li>
+          </ul>
+        </div>
+      </section>
 
-        </section>
+      <section class="entertainment">
+          <h3>Entertainment-News</h3>
 
-
-
-
-
-
-        <section class="technology">
-
-            <div class="flex-items">
-                <img src="../images/4.jpg" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta mollitia aperiam maxime officiis
-                    </p>
-
-            </div>
-            <div class="flex-items">
-                <img src="../images/4.jpg" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta mollitia aperiam maxime officiis
-                   </p>
-            </div>
-            <div class="flex-items">
-                <img src="../images/4.jpg" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta mollitia aperiam maxime officiis
-                    </p>
-            </div>
-            <div class="flex-items">
-                <img src="../images/4.jpg" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta mollitia aperiam maxime officiis
-                    </p>
-            </div>
-
-        </section>
-
-
-        <section class="politics">
-
-        </section>
-
-
-        <section class="entertainment">
-
-        </section>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+      </section>
     </main>
-
-</body>
-
+  </body>
 </html>
