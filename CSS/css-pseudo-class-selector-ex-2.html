@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* [type="checkbox"]:checked{
+            box-shadow: 2px 0px 10px 0px red;
+        } */
+
+        input:checked{
+            box-shadow: 2px 0px 10px 0px blue;
+        }
+
+        option:checked{
+            color: darkred;
+            background-color: deepskyblue;
+        }
+
+        input:read-only{
+            color: forestgreen;
+            background-color: gold;
+        }
+
+
+input:focus{
+    background-color: indigo;
+    color: lawngreen;
+}
+
+        input:disabled{
+            color: gold;
+            background-color: indigo;
+        }
+
+
+        input:nth-of-type(2){
+            box-shadow: 0px 4px 10px red;
+        }
+
+        input:last-of-type{
+            box-shadow: 0px 4px 10px green;
+        }
+
+        input:first-of-type{
+            box-shadow: 0px 4px 10px blue;
+        }
+
+        input:only-of-type{
+            box-shadow: 0px 4px 10px brown;
+        }
+
+        input:nth-last-of-type(3){
+            box-shadow: 0px 4px 10px olivedrab;
+        }
+    </style>
+</head>
+<body>
+    
+    <form>
+        <input type="number" name="" id="">
+        <input type="text" value="Hello" readonly>
+        <input type="text" disabled value="Codekul">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="radio">
+
+
+        <!-- <select>
+            <option>Java</option>
+            <option>HTML</option>
+        </select> -->
+    </form>
+</body>
+</html>

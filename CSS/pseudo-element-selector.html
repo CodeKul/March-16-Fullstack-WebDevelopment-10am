@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+    <style>
+        p::first-letter{
+            font-size: x-large;
+            color: orangered;
+        }
+
+
+        p::first-line{
+        font-style: italic;
+        background-color: rgb(166, 255, 0);
+        color: rgb(187, 152, 251);
+        }
+
+li::after{
+    /* content: '♥'; */
+
+    content: "";
+    border-left: 2px solid red;
+
+    margin-left: 10px;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas
+        repellendus explicabo eum nemo animi ratione officiis labore tempore
+        reiciendis exercitationem sint nam natus cupiditate, quia dicta qui
+        asperiores adipisci. Velit?
+      </p>
+
+
+      <ul>
+          <li>One</li>
+          <li>Two</li>
+          <li>Three</li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -130,16 +130,30 @@ syntax -> element:state{
 
       a:link{
           color: deeppink;
+          /* font-size: larger; */
+          font-style: italic;
+          background-color: chartreuse;
       }
 
       a:visited{
           color: gold;
+          background-color: rgb(255, 0, 0);
+          font-size: small;
       }
 
       a:hover{
           font-size: larger;
           background-color: greenyellow;
           color: indigo;
+      }
+
+      a:active{
+        background-color: crimson;
+        color: darkgoldenrod;
+      }
+
+      input:focus{
+        background-color: darkorange;
       }
 
 
@@ -182,10 +196,14 @@ Child Selector -->
           </ol>
         </div>
       </h3>
+
+
       <section class="sports">
         <div class="flex-items">
           <img src="../images/3.jpg" />
           <p>
+
+            <a href="https://www.microsoft.com">Visit Microsoft</a>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam dolore
             quas ipsum praesentium commodi doloribus aut voluptate est quidem
             ex, sapiente fugit porro voluptatum explicabo. Laboriosam, minima?
