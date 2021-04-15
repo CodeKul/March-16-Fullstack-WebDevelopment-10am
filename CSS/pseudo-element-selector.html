@@ -14,6 +14,22 @@
             color: orangered;
         }
 
+        /* p::selection{
+          background-color: brown;
+          color: gold;
+         text-decoration: underline;
+        }
+
+        p::-moz-selection{
+          background-color: darkred;
+          color:#fff;
+          text-decoration: underline;
+        } */
+
+    p::cue{
+      color: green;
+    }
+
 
         p::first-line{
         font-style: italic;
@@ -28,6 +44,10 @@ li::after{
     border-left: 2px solid red;
 
     margin-left: 10px;
+}
+
+li::marker{
+  color: blue;
 }
 
     </style>

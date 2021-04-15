@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+        .container{
+            width: 400px;
+            height: 400px;
+            background-color: chartreuse;
+            display: inline-block;
+            
+           
+           
+        }
+
+        .container:hover{
+            transform: translateY(200px) translateX(200px) rotateY(180deg) scale(3) skewX(60deg);
+            /* transform: rotateY(180deg);
+            transform: scale(3);
+            transform: skewX(60deg);
+            transform: ; */
+            transition-duration: 10s;
+            transition-delay: 3s;
+        }
+
+        .next{
+            display: inline-block;
+            height: 400px;
+            width: 400px;
+            background-color: crimson;
+        }
+
+        /* transform property values 
+
+        transform property is divided in two categories 
+        1. transform 2d 
+        2. transform 3d
+
+        translate - moving or shifting the element 
+        rotate - rotate our element 
+        scale - zoom the element */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quibusdam
+      iure delectus exercitationem recusandae, qui labore illo porro rerum sed
+      hic in laborum quis dolorum ab alias fuga. Nihil, possimus!
+    </div>
+
+
+    <div class="next">
+
+    </div>
+  </body>
+</html>
