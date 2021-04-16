@@ -7,34 +7,37 @@
     <title>Document</title>
 
     <style>
-        .container{
-            width: 400px;
-            height: 400px;
-            background-color: chartreuse;
-            display: inline-block;
-            
-           
-           
-        }
+      .container {
+        width: 400px;
+        height: 400px;
+        background-color: chartreuse;
+        display: inline-block;
+      }
 
-        .container:hover{
-            transform: translateY(200px) translateX(200px) rotateY(180deg) scale(3) skewX(60deg);
-            /* transform: rotateY(180deg);
+      .container:hover {
+        /* transform: translateY(10em) translateX(200px) rotateY(180deg) scale(3)
+          skewX(60deg); */
+
+
+       
             transform: scale(3);
-            transform: skewX(60deg);
-            transform: ; */
-            transition-duration: 10s;
-            transition-delay: 3s;
-        }
+            
+            transform: rotateX(180deg);
+            transform: skewX(180deg);
+            transform: scaleX(1.5);
+          
+        transition-duration: 10s;
+        transition-delay: 3s;
+      }
 
-        .next{
-            display: inline-block;
-            height: 400px;
-            width: 400px;
-            background-color: crimson;
-        }
+      .next {
+        display: inline-block;
+        height: 400px;
+        width: 400px;
+        background-color: crimson;
+      }
 
-        /* transform property values 
+      /* transform property values 
 
         transform property is divided in two categories 
         1. transform 2d 
@@ -52,9 +55,6 @@
       hic in laborum quis dolorum ab alias fuga. Nihil, possimus!
     </div>
 
-
-    <div class="next">
-
-    </div>
+    <div class="next"></div>
   </body>
 </html>
