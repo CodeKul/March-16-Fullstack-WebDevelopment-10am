@@ -9,48 +9,90 @@
     <style>
 
         .main-container{
-            transform-style: preserve-3d;
+           
             perspective: 400px;
         }
 
 
         .child-container{
+            transform-style:preserve-3d;
             height: 400px;
             width: 400px;
+            position: relative;
         }
 
 
-        .front-card{
-            margin-top: 400px;
+        .back-card{
+            height: 400px;
+            width: 400px;
+            /* margin-top: 400px; */
             background-color: chartreuse;
         }
 
 
-        .front-card:hover{
+        .front-card, .back-card{
+            position: absolute;
+            backface-visibility: hidden;
+           
+           
+        }
+
+
+        .back-card{
+            /* z-index: -1; */
+            transform: rotateY(180deg);
+        }
+
+        .main-container:hover .child-container{
             /* transform: translateZ(150px);
             transform: rotateZ(180deg);
             transform: scaleZ(1.5);
             transform: translate3d(50px, 150px, 100px); */
-            transform: rotate3d(1,1,1,180deg);
-            transition-duration: 10s;
+            /* transform: rotate3d(1,0,1,180deg); */
+            /* transform: scale(1.2); */
+            transform: rotateY(180deg); 
+             transition-duration: 10s;
+        }
+
+         img{
+            height: 400px;
+            width: 400px;
+            object-fit: cover;
         }
 
 
+        .container-2:hover img{
+            border-radius: 50%;
+            height: 400px;
+            width: 400px;
+            transform: translate3d(15px, 20px, 15px);
+            transform: rotateY(180deg);
+            box-shadow: 2px 2px 4px 8px gray;
+            transition-duration: 4s;
+        }
 
+
+/* pulse effect */
     </style>
 </head>
 <body>
     <div class="main-container">
         <div class="child-container">
             <div class="front-card">
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius pariatur est, at atque rem maiores natus ex sunt expedita alias corrupti commodi eligendi ut tenetur praesentium assumenda omnis quidem ad.
+                <img src="../images/2.jpg" alt="">
             </div>
 
             <div class="back-card">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius pariatur est, at atque rem maiores natus ex sunt expedita alias corrupti commodi eligendi ut tenetur praesentium assumenda omnis quidem ad.
 
             </div>
         </div>
 
+    </div>
+
+
+    <div class="container-2">
+        <img src="../images/2.jpg" alt="">
     </div>
 </body>
 </html>
