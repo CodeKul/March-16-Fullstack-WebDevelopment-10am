@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* @keyframes pulse {
+            from {
+                box-shadow: 0px 0px 4px 8px red ;
+
+            }
+
+            to {
+                box-shadow: 2px 2px 20px 5px red ;
+            }
+        } */
+
+        @keyframes pulse {
+            0% { 
+                box-shadow: 0px 0px 0px 0px red ;
+                transform: scale(0.95);
+}
+            50% { box-shadow: 0px 0px 10px 5px red ;}
+            100% { box-shadow: 0px 0px 20px 10px red ;
+                transform: scale(0.95);}
+        }
+
+
+        @keyframes magic {
+            0%{background-color: black;}
+            20%{background-color: blue;
+            transform: translateY(100px);}
+            40%{background-color: chartreuse;
+            transform: rotateX(180deg);}
+            60%{background-color: crimson;
+            transform: scale(3) translateX(100px);}
+            80%{background-color: darkgoldenrod;
+            transform: rotateY(180deg);}
+            100%{background-color: darkmagenta;
+            transform: scale(0.5);}
+
+        }
+
+
+        .container{
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            background-color: blue;
+            animation-name: magic;
+            animation-duration: 25s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            /* box-shadow: 2px 2px 20px 5px red ; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+    </div>
+</body>
+</html>
