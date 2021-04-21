@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+
+    <style>
+        @keyframes leftToRight {
+            0% {left: 0; top: 0;}
+
+            100% {transform: rotateZ(90deg);}
+        }
+
+        @keyframes circularMotion {
+            0% {left: 0;}
+
+            100% {transform: rotateZ(360deg);}
+        }
+
+        @keyframes blink {
+            0% {opacity: 1;}
+            50% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+
+        header{
+            width: 500px;
+            /* background-color: blue; */
+            animation-name: blink;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+
+        img{
+            height: 100px;
+            width: 100px;
+            animation-name: circularMotion;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        main{
+            transform-style: preserve-3d;
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Animation Revision</h1>
+    </header>
+
+    <main>
+
+        <img src="logo.svg" alt="">
+      <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non tempore
+        deleniti quos, eveniet velit ipsa consequatur corporis. Dignissimos
+        eligendi voluptate cumque praesentium voluptatibus accusantium
+        cupiditate earum, provident nam impedit fugiat.
+      </div>
+    </main>
+  </body>
+</html>
