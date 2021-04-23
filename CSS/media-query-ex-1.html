@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      /* @media only print/screen/speech/all and (max-width:992px) {
+
+        } */
+
+li{
+    display: inline;
+}
+
+nav{
+    background-color: chartreuse;
+    color: crimson;
+}
+
+
+header{
+    background-color: darkcyan;
+}
+
+
+section{
+    display: inline-block;
+    width: 25%;
+}
+
+@media screen and (min-width:600px) and (max-width:900px) {
+    section{
+        width: 40%;
+    }
+}
+      @media screen and (max-width:600px){
+
+          section{
+              width: 100%;
+          }
+
+
+          nav{
+              background-color: darkred;
+              color: orange;
+          }
+
+
+          header{
+              background-color: palegreen;
+          }
+
+
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Media query</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Blog</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+
+    <main>
+      <section>
+        <h2>News</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur,
+          sint. Repellendus atque expedita eius porro. Recusandae eligendi nihil
+          eaque adipisci, qui, culpa reprehenderit sunt et fuga doloremque est
+          totam quas?
+        </p>
+      </section>
+      <section>
+        <h2>Sports</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+          assumenda enim voluptas nobis quae magnam obcaecati quod excepturi
+          inventore, possimus accusamus saepe eos, maiores neque! Iure quam
+          placeat et nam!
+        </p>
+      </section>
+      <section>
+        <h2>Entertainment</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+          modi, quis laborum minima possimus doloribus sunt perferendis
+          architecto eaque saepe placeat eius labore unde impedit quos veniam
+          illum esse! Impedit.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
