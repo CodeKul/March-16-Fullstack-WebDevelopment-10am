@@ -40,9 +40,16 @@
 
         .container{
             display: grid;
-            grid-template-columns: 200px 300px 400px;
+            /* grid-template-columns: 200px 1fr 2fr 3fr; */
+            grid-template-columns: repeat(4, 100px);
             grid-template-rows: 150px 100px;
+            column-gap: 10px;
+            row-gap: 10px;
+
+            /* justify-content: center; */
         }
+
+        /* minmax and repeat */
 
         /* .container .one {
             grid-row-start: 1 ;
@@ -51,6 +58,23 @@
             grid-column-start:1;
             grid-column-end:2;
         } */
+
+
+/* 100% vw - 200px = a 
+a will be considered as 100% whenewver we are using fr unit
+1fr 2fr 1fr
+ */
+
+
+        .one{
+            grid-column-start: 2;
+            grid-column-end: 3;
+
+            align-self: center;
+
+            grid-row-end:3 ;
+            grid-row-start: 1;
+        }
 
         img{
             /* max-height: 100%; */
