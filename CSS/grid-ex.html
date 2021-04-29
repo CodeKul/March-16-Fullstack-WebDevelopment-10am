@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .column-2{
+            display: inline-grid;
+            grid-template-columns: 200px 200px 200px;
+            grid-template-rows: 500px 300px;
+
+            column-gap: 25px;
+
+            row-gap: 25px;
+
+        }
+
+        img{
+            max-height: 100%;
+            max-width: 100%;
+        }
+
+        .one{
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+
+        .column-1{
+            display: inline-grid;
+            grid-template-columns: 200px;
+            grid-template-rows: repeat(6, auto-fill) ;
+        }
+
+        /* .column-1 img{
+            width: 200px;
+        } */
+
+        .main-container{
+            display: grid;
+            grid-template-columns: 400px auto;
+            column-gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="main-container">
+        <div class="column-1">
+
+            <div class="grid-items one"><img src="../images/2.jpg"></div>
+            <div class="grid-items"><img src="../images/2.jpg"></div>
+            <div class="grid-items"><img src="../images/3.jpg"></div>
+            <div class="grid-items"><img src="../images/4.jpg"></div>
+
+        </div>
+
+
+        <div class="column-2">
+            <div class="grid-items one"><img style="width: 100%;" src="../images/1.jpg"></div>
+            <div class="grid-items"><img src="../images/1.jpg"></div>
+            <div class="grid-items"><img src="../images/1.jpg"></div>
+            <div class="grid-items"><img src="../images/1.jpg"></div>
+        </div>
+    </div>
+</body>
+</html>
