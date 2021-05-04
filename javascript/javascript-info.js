@@ -11,23 +11,62 @@ const PI = 3.14;
 //null, empty and undefined
 
 
+// 1.declare a variable 
+// 2. define or initialize a variable 
+// 3. use it or call the variable
+
+
+// var keyword variable are global scope and function block scope variable
+
 
 
 // PI = 50;
 
-(function showNumber () {
-    var a = 20;
+var b;
 
-    let name = "Sagar";
+b=50;
+
+console.log(b);
+
+var a =30;
+
+let c = 44.50;
+
+
+console.log(c);
+
+(function showNumber () {
+    // var a = 20;
+
+    let name1 = "Sagar";
 
     name ="Sanket";
 
     console.log(number1);
-    console.log(name);
+    // console.log(name1);
     console.log(a);
+    console.log(name)
+    console.log(c);
 })();
 
-console.log(a);
+//  console.log(a);
 console.log(number1);
+
+// console.log(name1);
+
+// PI=3.25;
 console.log(PI);
+
+
+
+let z;
+z=66;
+
+
+
+console.log(z);
+
+
+
+
 
