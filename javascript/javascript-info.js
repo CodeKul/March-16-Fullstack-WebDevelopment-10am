@@ -55,7 +55,7 @@ console.log(number1);
 // console.log(name1);
 
 // PI=3.25;
-console.log(PI);
+console.log(PI)
 
 
 

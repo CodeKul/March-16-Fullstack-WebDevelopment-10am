@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <!-- <button onclick="addition()">Display Data</button> -->
+
+    <script>
+
+
+addition(44,55);
+
+function addition (a, b) {
+var a;
+    var b;
+
+    var add = a+b;
+
+    console.log(add);
+    document.write(add);
+
+    return add;
+}
+
+console.log(addition(50,30));
+
+
+
+// function variable/ function expression
+var substraction = function (a,b) {
+var a;
+var b;
+
+var sub = a-b;
+
+console.log(sub);
+document.write(sub);
+}
+
+substraction(50,25);
+
+// console.log(substraction(220,44));
+
+document.write(substraction(33,25));
+
+(function multiplication() {
+    let a = 30;
+    let b=20;
+
+    let mult = a*b;
+
+    console.log(mult)
+    document.write(mult)
+
+}) ();
+
+
+var division = (function (a, b) {
+   
+
+    let div = a/b;
+
+    console.log(div)
+}) (25,60);
+
+function addn () {
+    let a=30;
+    let b=40;
+    return sum;
+    let sum = a+b;
+    
+}
+
+//return statement 
+
+// 1. It stops execution and comes out of the function 
+// 2. It assigns the value to the function
+
+console.log(addn());
+
+    </script>
+</body>
+</html>
