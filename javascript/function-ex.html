@@ -72,8 +72,9 @@ var division = (function (a, b) {
 function addn () {
     let a=30;
     let b=40;
-    return sum;
+    
     let sum = a+b;
+    return sum;
     
 }
 
@@ -84,6 +85,26 @@ function addn () {
 
 console.log(addn());
 
+
+// var showMsg = function () {
+//     document.write("Hello, welcome to codekul")
+// }
+
+showMsg = () => {
+    console.log("Welcome to codekul")
+    document.write("Welcome to codekul")
+}
+
+showMsg();
+
+var showAdd = (x,y) => {
+    
+    let add = x+y;
+    console.log(add)
+    document.write(add)
+}
+
+showAdd(30,25);
     </script>
 </body>
 </html>
