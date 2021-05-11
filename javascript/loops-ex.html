@@ -33,6 +33,68 @@
         for(var j = 0; j<3;){
             console.log("j :" + j++);
         }
+        // for in loop is used in case of object.
+
+        // for-in loop syntax
+        // for (key in object){
+        //     statements
+        // }
+
+
+        let person = {
+            name: "Sagar",
+            city: "Pune",
+            designation: "Software Engineer"
+        }
+
+        let members = ["Sagar", "Rohini", "Oindrilla", "Sayali"]
+
+        let text = "";
+
+        let text2="";
+
+        let x;
+
+        for(x in person) {
+            text = text + person[x] + "";
+            console.log(text);
+        }
+
+
+        // for (x in members) {
+        //     text2 = text2 + members[x] + "";
+        //     console.log(text2);
+        // }
+
+
+        members.forEach( showData)
+
+        function showData(value, index) {
+            text2 = text2 + value + "  ";
+            console.log(text2);
+            
+        }
+
+
+        // for-off loop iterates through the values of an iterable object
+
+        // syntax -
+
+        // for (variable of iterable object) {
+        //     statements
+        // }
+
+
+        let tech = ["Java", "Spring", "ExpressJs", "NodeJs", "Javascript"]
+
+    
+let data = "";
+
+for (let x of person){
+    data+=x+ " ";
+    console.log(data);
+}
+
 
         console.log(j);
     </script>
