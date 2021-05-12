@@ -1,31 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <!-- A Callback function is a function which can be passed as an argument -->
+  </head>
+  <body>
+    <!-- A Callback function is a function which can be passed as an argument for a function -->
 
+    <!-- 1. callback 
+2. promises 
+3. async/await 
 
+XHR - XmlHttpRequest
+fetch method 
+axios method -->
     <script>
-        function showData(data) {
-            console.log(data);
+      function showData(data) {
+        console.log(data);
+      }
 
-        }
+      function data(a, b) {
+        var add = a + b;
+        return add;
+      }
+
+      // data(20,30)
+
+      showData(data(30, 20));
+
+      function first() {
+        console.log(1);
+      }
+
+      function second() {
+
+        setTimeout(()=>{
+            console.log(2);
+        },3000)
+        
+      }
+      function third() {
+        setTimeout(()=>{
+            console.log(3);
+        },3000)
+      }
 
 
-        function data (a,b) {
-var add = a+b;
-return add;
-        }
-
-        // data(20,30)
-
-        showData(data(30,20));
+      third();
+      first();
+      second();
+     
     </script>
-
-</body>
+  </body>
 </html>
