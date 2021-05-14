@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // const getData = async() => {
+        //     var data = "Codekul";
+        //     return data;
+        // }
+
+        // getData().then(data => console.log(data));
+
+
+        const getData = async() => {
+            var data = await "Codekul";
+            console.log(data)
+            return data;
+        }
+
+      console.log(1);
+      getData();
+      console.log(2);
+
+
+
+
+     // Aync() => {Await}
+
+
+    //   Whenever we are adding a await before a promise it makes the execution thread to wait for 
+    //   asynchronous task/promise
+
+
+function returnPromises() {
+    return new Promise((resolve)=> {
+        setTimeout(() => {
+            console.log("Promise executed")
+            resolve("Sample data")
+        }, 2000)
+    });
+}
+
+
+async function showData() {
+    var newData = "Rohini";
+    var getData = await returnPromises();
+    console.log(getData);
+}
+
+//closures, XHR, fetch and axios methods
+showData();
+    </script>
+</body>
+</html>

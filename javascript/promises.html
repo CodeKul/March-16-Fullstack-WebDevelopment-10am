@@ -119,6 +119,89 @@ promise2.then(function () {
 
 
 
+            let a = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(10);
+                }, 3000);
+            });
+
+
+            // a.then((result) => {
+            //     console.log(result);
+            //     return result * 2;
+
+            // }). then((result) => {
+            //     console.log(result);
+            //     return result *3;
+                
+            // }) .then ((result) => {
+            //     console.log(result);
+            // })
+
+
+            a.then((result) => {
+                console.log(result);
+                return result * 2;
+
+            });
+            a. then((result) => {
+                console.log(result);
+                return result *3;
+                
+            });
+            a .then ((result) => {
+                console.log(result);
+            })
+
+
+
+            function getUser(userId) {
+                return new Promise ((resolve, reject) => {
+                    console.log("Get User Id from Database");
+
+                    setTimeout(() => {
+                        resolve({
+                            userId: userId,
+                            username: "admin"
+                        });
+                    }, 1000)
+                })
+            }
+
+
+            function getServices(user) {
+                return new Promise((resolve, reject) => {
+                    console.log(`Get the services of ${user.username} from the API`)
+               
+                    setTimeout(()=> {
+                        resolve(['Email', 'VPN', 'CDN'])
+                    }, 2000)
+               
+                })
+            }
+
+
+           
+            function getServiceCost(services) {
+                return new Promise((resolve, reject) => {
+                    console.log(`Calculate the service cost of ${services} from the API`)
+               
+                    setTimeout(()=> {
+                        resolve(services.length * 100);
+                    }, 3000)
+               
+                });
+            } 
+
+
+
+            getUser(123)
+            .then(getServices)
+            .then(getServiceCost)
+            .then(console.log)
+
+           
+
     </script>
 </body>
 </html>
