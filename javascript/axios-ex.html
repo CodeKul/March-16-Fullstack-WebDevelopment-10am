@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">User Id</label>
+    <input id="userid" type="text"> <br>
+
+    <label for="">Id</label>
+    <input id="id" type="text"> <br>
+
+    <label for="">Title</label>
+    <input id="title" type="text"> <br>
+
+    <label for="">Completion Status</label>
+    <input type="checkbox" value="Completed" name="complete" id="complete">
+    <label for="">Completed</label> <br>
+
+
+    <button onclick="userValues()">Send Data</button>
+    <button onclick="save()">Get Data</button>
+
+
+    <p id="msg"></p> 
+
+    <div class="tableData" id="tbl"></div>
+
+
+
+
+    <script>
+        function userValues() {
+            var userId = document.getElementById("userid").value;
+
+            var id = document.getElementById("id").value;
+            var title = document.getElementById("title").value;
+            
+            if(document.getElementById("complete".checked)) {
+                var completed = document.getElementById("complete").value;
+            } else {
+                var completed = (document.getElementById("complete").value = "No");
+            }
+
+
+            let userData = JSON.stringify({
+                userId: userId,
+                id: id,
+                title: title,
+                completed: completed,
+            });
+
+            console.log(userData);
+            return userData;
+        }
+
+
+
+        function save() {
+            let dataUser = userValues();
+            axios.post("https://jsonplaceholder.typicode.com/posts", dataUser, {
+                headers: {"Content-type": "application/json"}
+            })
+
+            .then((response) => {
+                console.log(response.data);
+            });
+
+            axios.get("https://jsonplaceholder.typicode.com/posts", {
+                headers:{"Content-type": "application/json"},
+            })
+
+            .then((response) => {
+                console.log(response);
+
+                var arr = response.data;
+
+                console.log(arr);
+                return arr;
+            })
+
+            .then((arr) => {
+
+                let tblShow = `
+            <table>
+
+                <tr>
+                    <th>Body</th>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>User Id</th>
+                        
+                 </tr>
+
+                </table>
+            
+            `
+
+
+            arr.map((element) => {
+                tblShow += `
+                <table>
+                <tr>
+                    <td>${element.body}</td>
+                    <td>${element.id}</td>
+                    <td>${element.title}</td>
+                    <td>${element.userId}</td>
+                    </tr>
+                    </table>
+                `;
+            });
+
+
+            document.getElementById("tbl").innerHTML =tblShow;
+            
+
+            });
+
+          
+
+
+            
+        }
+    </script>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
+</html>
