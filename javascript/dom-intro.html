@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="">Post Id</label>
+        <input id="postId" type="text"> <br>
+
+        <label for="">Name</label>
+        <input id="fname" type="text"> <br>
+
+        <label for="">Email</label>
+        <input id="mail" type="text"> <br>
+
+        <label for="">Comment</label>
+        <input class="comment" id="comment" type="text"> <br>
+
+    </form>
+
+
+
+    <script>
+
+        // accessing elements with the help of javascript. 
+        // we use document object and then some js methods to access the elements.
+        
+        // syntax -> document.getElementById("")
+
+
+        // And also we can access our elements with the help of css selectors 
+        // we use document object and js methods known as queryselector
+
+       // syntax -> document.querySelector("#useId")  to access with the help of id
+      //  syntax -> document.querySelector(".comments") to access with the help of classname
+
+    //   to target access multiple elements we use queryselectorall 
+    //syntax -> document.querySelectorAll("")
+
+        var a = document.getElementsByTagName("input")
+        var b = document.getElementsByClassName("comment")
+
+        var c = window.prompt("Hello, welcome to codekul")
+
+        var d = document.createElement("img")
+
+
+       // createElement, Nodes, child Nodes, DOM vs BOM
+    </script>
+</body>
+</html>

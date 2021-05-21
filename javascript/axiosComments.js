@@ -1,4 +1,4 @@
-const { default: axios } = require("axios");
+
 
 function getData() {
     let postId = document.getElementById("postId").value;
@@ -26,6 +26,8 @@ function sendComment() {
         {headers: {"Content-type": "application/json"}}
     );
 
+    console.log(response);
+
     p.then((response) =>{
         console.log(response.data);
     });
@@ -34,16 +36,18 @@ function sendComment() {
 
 function getComments() {
     let result = axios.get("https://jsonplaceholder.typicode.com/comments", {
-        headers: {"Content-type": "application/json"}
+        headers: {"Content-type": "application/json"},
     });
 
-    console.log(result);
+   
 
     result.then(function (res) {
-        let response = response.data;
+        let response = res.data;
         console.log(response);
         return response;
     })
+
+    // console.log(result);
 
 
     .then(function (response) {
