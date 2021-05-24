@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table,th,td{
+            border: solid 2px black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    
+    <p id="quotes"></p>
+
+
+    <button onclick=createTable()>create table</button>
+
+    <script>
+const div = document.createElement("div")
+const p = document.createElement("p")
+
+div.appendChild(p);
+
+p.append("Codekul")
+// p.innerHTML = "<b>Inside P</b>"
+
+
+const body = document.body
+
+body.append(div)
+
+
+const quotes = [{
+    quote: "",
+    author: ""
+}, {}, {}]
+
+
+function createTable() {
+    const table = document.createElement("table")
+    const row1 = document.createElement("tr")
+    const row2 = document.createElement("tr")
+    const taskHeadCell = document.createElement("th")
+    const scheduleHeadCell = document.createElement("th")
+    const taskDatacell = document.createElement("td") 
+    const scheduleDatacell = document.createElement("td") 
+    const body = document.body
+
+    body.append(table)
+
+    table.appendChild(row1);
+    table.appendChild(row2);
+
+
+    row1.appendChild(taskHeadCell)
+    row1.appendChild(scheduleHeadCell)
+    row2.appendChild(taskDatacell)
+    row2.appendChild(scheduleDatacell)
+
+    // appendChild method accepts only and only a node object/ object node 
+
+    // append method can accept object node as well as string also
+
+
+    taskHeadCell.append("Task")
+    scheduleHeadCell.append("Schedule")
+
+
+    
+
+    console.log("dom-table")
+
+
+}
+
+    </script>
+</body>
+</html>
