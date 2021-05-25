@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <h1>Codekul</h1>
+
+    <div>
+      <p>
+        <span>Inside Span</span>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. At
+        voluptatibus veritatis doloremque commodi, est maxime, excepturi dolorum
+        nisi maiores rerum iure optio aliquid totam nobis nulla tempore culpa
+        harum fuga?
+      </p>
+
+      <ul>
+        <li>April</li>
+        <li>May</li>
+        <li>June</li>
+        <li>July</li>
+      </ul>
+    </div> -->
+
+
+
+    <script>
+
+let body = document.body;
+
+var heading = document.createElement("h1")
+
+// parentNode.append(childNode or String)
+// parentNode.appendChild(childNode)
+
+ body.append(heading)
+
+
+heading.append("Codekul")
+
+
+let container = document.createElement("div")
+
+let paragrapgh = document.createElement("p")
+
+ body.append(container)
+
+container.appendChild(paragrapgh);
+
+
+let span = document.createElement("span")
+
+span.innerText= "Inside Span"
+
+paragrapgh.appendChild(span)
+
+// paragrapgh.append(" Lorem ipsum dolor sit, amet consectetur adipisicing elit. At voluptatibus veritatis doloremque commodi, est maxime, excepturi dolorum nisi maiores rerum iure optio aliquid totam nobis nulla tempore culpa harum fuga?")
+
+let pContent = document.createTextNode(" Lorem ipsum dolor sit, amet consectetur adipisicing elit. At voluptatibus veritatis doloremque commodi, est maxime, excepturi dolorum nisi maiores rerum iure optio aliquid totam nobis nulla tempore culpa harum fuga?")
+
+paragrapgh.append(pContent)
+
+let ul = document.createElement("ul")
+
+container.appendChild(ul)
+
+let liOne = document.createElement("li")
+liOne.append("April")
+let liTwo = document.createElement("li")
+liTwo.innerText = "May"
+let liThree = document.createElement("li")
+liThree.append("June")
+let liFour = document.createElement("li")
+liFour.innerText = "July"
+
+ul.appendChild(liOne)
+ul.appendChild(liTwo)
+ul.appendChild(liThree)
+ul.appendChild(liFour)
+
+container.append(paragrapgh)
+
+paragrapgh.insertBefore(span, pContent)
+
+
+
+    </script>
+  </body>
+</html>
