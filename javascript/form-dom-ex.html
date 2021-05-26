@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            margin-top:  10px;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <form>
+        <div>
+            <label for="fname">First Name</label>
+            <input type="text" id="fname">
+        </div>
+
+        <div>
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname">
+        </div>
+
+        <div>
+            <label for="city">City</label>
+            <select name="city" id="city">
+                <option value="pune">Pune</option>
+                <option value="banglore">Banglore</option>
+                <option value="delhi">Delhi</option>
+                <option value="mumbai">Mumbai</option>
+                <option value="hyd">Hyderabad</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="gender">Select Gender</label>
+            <input type="radio" id="male" value="Male" name="gender">
+            <label for="male">Male</label>
+
+            <input type="radio" id="female" value="Female" name="gender">
+            <label for="female">Female</label>
+
+            <input type="radio" id="other" value="Other" name="gender">
+            <label for="other">Other</label>
+        </div>
+
+
+        <div>
+            <label for="active">Active</label>
+            <input type="checkbox" name="active" id="active" value="yes">
+            <label for="yes">Yes</label>
+        </div>
+
+        <div>
+            <button onclick=displayValues() type="button">Get Values</button>
+        </div>
+    </form>
+
+
+
+    <script>
+        function displayValues() {
+            let firstName = document.getElementById("fname").value
+
+            let lastName = document.getElementById("lastname").value
+
+            let city = document.getElementById("city").value
+
+            let gender = document.getElementsByName("gender")
+
+           
+
+
+            for(let i=0; i<gender.length; i++) {
+                if(gender[i].checked){
+                    var genderValue = gender[i].value;
+                    break;
+                }
+            }
+
+            console.log(genderValue)
+
+            if(document.getElementById("active").checked) {
+                var activeStatus = document.getElementById("active").value
+            }else {
+                var x = document.getElementById("active").value = "No"
+                activeStatus = x
+            }
+
+
+            let formData = {
+                firstName: firstName,
+                lastName: lastName,
+                city: city,
+                gender: genderValue,
+                active: activeStatus
+            }
+
+            console.log(formData)
+
+            document.write(formData.firstName)
+
+
+
+
+            console.log(firstName);
+        }
+    </script>
+</body>
+</html>
