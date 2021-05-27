@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        function add(a,b, ...y){
+            let total = 0;
+
+            console.log(y)
+
+            for (i of y) {
+                total += i
+            }
+
+
+
+            let result = total * (a+b)
+
+            console.log(result)
+        }
+
+
+        add(10,20, 30,40,50,60)
+
+
+        function add (x,y,z){
+            console.log(x+y+z)
+        }
+
+        let numbers = [10,30,40,50,60]
+
+        add(100, ...numbers)
+
+
+        function sum(a, b, ...z){
+            let sum =0
+
+            for (let j of z) {
+sum = sum + j
+            }
+            return sum;
+        }
+
+        console.log(sum(10,20,30,40,50))
+
+// rest operator/parameters when we pass multiple arguments it combines all the values 
+// and make it as one array variable
+//rest paramater is used while declaration
+
+
+
+//spread operator/parameters when we pass one array it is divided into 
+//multiple elements
+//spread parameter is used while invoking function
+
+
+
+let arr = [20,30,40,50]
+
+let arrCopy = [...arr] //spread the array into a list of parameters
+
+
+alert(JSON.stringify(arr) ===JSON.stringify(arrCopy))
+
+
+const person = {
+    firstName: "Sagar",
+    lastName: "Pachore",
+    city: "Pune",
+    profession: "SWE"
+}
+
+
+const {firstName, ...restPerson} = person;  //dividing the data of person object into two properties or values
+
+console.log(firstName);
+
+console.log(restPerson)
+    </script>
+</body>
+</html>
