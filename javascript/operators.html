@@ -7,9 +7,42 @@
     <title>Document</title>
 </head>
 <body>
+
+
+    <form action="">
+
+        <label for="">First Name</label>
+        <input id="fname" type="text"> <br>
+
+        <label for="">Last Name</label>
+        <input id="lastname" type="text"> <br>
+
+
+        <label for="">Database</label>
+        <input id="db" type="text"> <br>
+
+        <label for="">Cloud architecture</label>
+        <input id="ca" type="text"> <br>
+
+
+        <label for="">Networking</label>
+        <input id="nw" type="text"> <br>
+
+
+        <label for="">Systems Programming</label>
+        <input id="syspro" type="text"> <br>
+
+
+        <button onclick=showResult()>Show result</button>
+
+    </form>
     
 
     <script>
+
+
+
+
         // arithmatic operators 
         // +, -, *, /, %, ++, --
 
@@ -25,6 +58,61 @@
         //post increment/decrement operator - first executes the statement and then increment/decrement
         //pre increment/decrement operator - first increment/decrement and then it will execute the statement
         console.log(++a)
+
+
+        //comparison operators 
+
+        // less than < 
+        //greater than >
+        //equal to ==
+        //less than equal to <=
+        //greater than equal to >=
+        //strict equality operator ===
+
+        let x =10
+        let y=20
+        let z="10"
+
+        console.log(x === z)
+        console.log(x>10)
+        console.log(x>z)
+
+
+        //logical operators
+        // AND operator  &&
+        // OR operator   ||
+        // NOT operator   !
+
+
+        // AND operator - output will be true only and only when both the sides are true
+        // otherwise it give output as false
+
+        //OR operator - If any of the side/value is true it will give output as true 
+        //and it will give false when both of the sides/ values are false 
+
+        let l = false 
+        let m = false
+
+        console.log(l || m)
+        console.log(!l)
+        console.log(!(l && m))
+
+
+        function showResult(){
+            let firstName = document.getElementById("fname").value 
+            let lastName = document.getElementById("lastname").value 
+            let database = document.getElementById("db").value 
+            let compArch = document.getElementById("ca").value 
+            let networking = document.getElementById("nw").value 
+            let sysPro = document.getElementById("syspro").value 
+
+            let total = parseInt(database) + parseInt(compArch) + parseInt(networking) + parseInt(sysPro);
+console.log((Number(document.getElementById("db").value)))
+            console.log(total)
+
+            document.creat
+            
+        }
     </script>
 </body>
 </html>
