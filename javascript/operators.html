@@ -69,9 +69,9 @@
         //greater than equal to >=
         //strict equality operator ===
 
-        let x =10
-        let y=20
-        let z="10"
+        var x =10
+        var y=20
+        var z="10"
 
         console.log(x === z)
         console.log(x>10)
@@ -90,8 +90,8 @@
         //OR operator - If any of the side/value is true it will give output as true 
         //and it will give false when both of the sides/ values are false 
 
-        let l = false 
-        let m = false
+        var l = false 
+        var m = false
 
         console.log(l || m)
         console.log(!l)
@@ -99,18 +99,78 @@
 
 
         function showResult(){
-            let firstName = document.getElementById("fname").value 
-            let lastName = document.getElementById("lastname").value 
-            let database = document.getElementById("db").value 
-            let compArch = document.getElementById("ca").value 
-            let networking = document.getElementById("nw").value 
-            let sysPro = document.getElementById("syspro").value 
+            var firstName = document.getElementById("fname").value 
+            var lastName = document.getElementById("lastname").value 
+            var database = document.getElementById("db").value 
+            var compArch = document.getElementById("ca").value 
+            var networking = document.getElementById("nw").value 
+            var sysPro = document.getElementById("syspro").value 
 
-            let total = parseInt(database) + parseInt(compArch) + parseInt(networking) + parseInt(sysPro);
-console.log((Number(document.getElementById("db").value)))
+            var total = parseInt(database) + parseInt(compArch) + parseInt(networking) + parseInt(sysPro);
+            console.log((Number(document.getElementById("db").value)))
             console.log(total)
 
-            document.creat
+            var percentage = (total/400)*100
+
+            if (database < 35) {
+                console.log(" Database Failed")
+               // return 0;
+            } 
+            else {
+                console.log("database passed, marks :" + database)
+               // return 1;
+            }
+
+
+            if (compArch < 35) {
+                console.log("computer architecture Failed")
+                //return 0;
+            } 
+            else {
+                console.log("computer architecture passed, marks :" + compArch)
+               // return 1;
+            }
+
+
+            if (networking < 35) {
+                console.log("Networking Failed")
+                //return 0;
+            } 
+            else {
+                console.log("Networking passed, marks :" + networking)
+               // return 1;
+            }
+
+            if (sysPro < 35) {
+                console.log("System Programming Failed")
+                //return 0;
+            } 
+            else {
+                console.log("System Programming passed, marks :" + sysPro)
+               // return 1;
+            }
+
+console.log(individualSubj)
+            var individualSubj = ((database > 35) && (compArch > 35))  && ((networking >35)  && (sysPro >35))
+
+
+            if ((percentage > 75) && (individualSubj == true)) {
+                console.log("First Class with Distinction")
+            } else if ((percentage > 60 && (individualSubj ==true))) {
+                console.log("First Class")
+            } else if ((percentage > 50) && (individualSubj ==true)){
+                console.log("Second class")
+            } else if ((percentage > 40) && (individualSubj == true)) {
+                console.log("Pass Class")
+            } else if ((percentage < 35)) {
+                console.log("Failed")
+            }
+
+            
+
+            // 1. first it will check individual subject marks and passed or not 
+            // 2. calculate the percentage and if failed in individual subjects by default should 
+            // return failed else display the percentage and passing class
             
         }
     </script>
