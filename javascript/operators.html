@@ -112,6 +112,8 @@
 
             var percentage = (total/400)*100
 
+            console.log("percentage: " + percentage)
+
             if (database < 35) {
                 console.log(" Database Failed")
                // return 0;
@@ -150,9 +152,9 @@
                // return 1;
             }
 
-console.log(individualSubj)
-            var individualSubj = ((database > 35) && (compArch > 35))  && ((networking >35)  && (sysPro >35))
 
+            var individualSubj = ((database > 35) && (compArch > 35))  && ((networking >35)  && (sysPro >35))
+            console.log("individual subject" + individualSubj);
 
             if ((percentage > 75) && (individualSubj == true)) {
                 console.log("First Class with Distinction")
@@ -162,7 +164,7 @@ console.log(individualSubj)
                 console.log("Second class")
             } else if ((percentage > 40) && (individualSubj == true)) {
                 console.log("Pass Class")
-            } else if ((percentage < 35)) {
+            } else if ((percentage < 35) || (individualSubj == false)) {
                 console.log("Failed")
             }
 

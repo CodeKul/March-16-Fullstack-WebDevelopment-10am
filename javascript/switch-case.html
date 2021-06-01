@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //create a dropdown with options such as add, multipl, subs, division 
+        //calculate button use switch case to calculate resp conditions
+        //should display respective value on browser
+        let num1 = 100;
+        let num2 = 500;
+        let total =0;
+        let operation = "substract"
+
+        switch(operation){
+            case "add":  {
+                total = num1 + num2 
+            console.log(total)
+            break;
+
+            }
+            
+
+            case "substract": {
+                total = num1 - num2 
+            console.log(total)
+            break;
+
+            }
+
+
+            case "multiply": {
+                total = num1 * num2 
+            console.log(total)
+            break;
+            }
+
+            case "divide": {
+                total = num1 / num2 
+            console.log(total)
+            break;
+            }
+
+            default: console.log("wrong input")
+            break;
+        }
+    </script>
+</body>
+</html>
