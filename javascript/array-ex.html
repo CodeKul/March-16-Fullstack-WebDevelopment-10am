@@ -8,9 +8,27 @@
 </head>
 <body>
     <script>
+        //array.push()
+        //array.pop()
+        //array.map()
+        //array.toString()
+        //array.find()
+        //array.filter()
+        //array.slice()
+        //array.splice()
+        //array.concat()
+        //array.join()
+        //array.reduce()
+        //array.shift()
+        //array.unshift()
+        //array.forEach()
+        //array.sort()
+        //array.includes()
+
+
         var a =10;
         var names = ["sanket", "sagar", "rohini", "oindrilla"];
-        var numbers = [12, 23, 25, 55];
+        var numbers = [12, 23, 25, 55, -20,100,500];
 
         var messages= new Array("Hi", "Hello", "Hola");
 
@@ -55,6 +73,35 @@ document.write(tech);
 console.log(person.city)
 
         console.log(names);
+
+
+        //array.shift() - it removes the first element from an array and returns the removed element.
+//array.unsift() - it adds the new elements in the beginning of array i.e initial position
+        let data1 = names.shift()
+        console.log(data1)
+        console.log(names)
+let data2 = names.unshift("Sanket", "Jolly");
+        console.log(names)
+
+        let asc = names.sort()
+        console.log(names)
+
+        console.log(numbers)
+        let ascNum = numbers.sort()
+        console.log(numbers) 
+
+        let heroes = [
+            {name: "Superman", franchise: "DC"},
+            {name: "Ironman", franchise: "Marvel"},
+            {name: "Batman", franchise: "DC"},
+            {name: "Thor", franchise: "Marvel"}
+        ]
+
+        let marvelHeroes = heroes.filter(function(hero){
+            return hero.franchise == "Marvel";
+        })
+
+        console.log(marvelHeroes)
     </script>
 </body>
 </html>
