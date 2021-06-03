@@ -90,6 +90,9 @@ let data2 = names.unshift("Sanket", "Jolly");
         let ascNum = numbers.sort()
         console.log(numbers) 
 
+        // [200,22,30,3100,330,45]
+        // [200,22,30,3100,330,45]
+
         let heroes = [
             {name: "Superman", franchise: "DC"},
             {name: "Ironman", franchise: "Marvel"},
@@ -102,6 +105,53 @@ let data2 = names.unshift("Sanket", "Jolly");
         })
 
         console.log(marvelHeroes)
+
+        let cities = ["mumbai", "pune", "banglore", "hyderabad", "delhi"]
+
+        let showResult = cities.find(function(i) {
+            return i == "pune"
+        })
+
+        console.log(showResult)
+
+
+        let numberrs = [0,12,-20,-45,50,100,200]
+
+        // let showData1 = numberrs.find(function(j){
+        //     return j > 0
+        // })
+
+        let showData2 = numberrs.filter(function(z) {
+            return z >100 && z < 50;
+        })
+
+        //console.log(showData1)
+
+        console.log(showData2)
+
+        let nums = [10,20,30,50,44,11,500]
+
+        let filteredNums = nums.filter(function(p){
+            // if(p>100 && p<20) {
+            //     return true;
+            // }
+
+            return p/11 && p<500
+        })
+        console.log(filteredNums)
+
+        console.log(nums.toString())
+
+        let newArray = names.concat(nums)
+
+        console.log(newArray)
+
+        console.log(newArray.join("-hi"))
+
+
+        //create one text input field to take numbers from user
+        //whatever numbers you are adding that data should get stored as an array
+        //
     </script>
 </body>
 </html>
