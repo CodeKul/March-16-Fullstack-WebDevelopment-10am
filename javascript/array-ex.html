@@ -152,6 +152,25 @@ let data2 = names.unshift("Sanket", "Jolly");
         //create one text input field to take numbers from user
         //whatever numbers you are adding that data should get stored as an array
         //
+
+       // let sliceArray = nums.slice()
+
+        //let sliceArray = nums.slice(3)
+
+        let sliceArray = nums.slice(2,5)
+
+        console.log(sliceArray)
+
+        let spliceArray = nums.splice(2, 2, 7)
+
+        console.log(spliceArray)
+        console.log(nums)
+
+        let reducer= (accumalator, currentValue) => accumalator * currentValue;
+
+        console.log(nums.reduce(reducer))
+
+        console.log(nums.includes(99))
     </script>
 </body>
 </html>
