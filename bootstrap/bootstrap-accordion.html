@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="accordion" id="faq">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="question1">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#ans1"
+            aria-expanded="false"
+            aria-controls="ans1"
+          >
+            Question 1
+          </button>
+        </h2>
+
+        <div id="ans1" class="accordion-collapse collapse" aria-labelledby="question1" >
+            <div class="accordion-body">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure tempora
+                aliquam quo, id dolor porro iste hic amet, quibusdam et commodi, sit
+                minus? Earum quos, mollitia rerum recusandae ipsum in!
+            </div>
+          
+        </div>
+      </div>
+
+
+
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="question2">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#ans2"
+          >
+            Question 2
+          </button>
+        </h2>
+
+        <div id="ans2" class="accordion-collapse collapse show" >
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure tempora
+          aliquam quo, id dolor porro iste hic amet, quibusdam et commodi, sit
+          minus? Earum quos, mollitia rerum recusandae ipsum in!
+        </div>
+      </div>
+
+
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="question3">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#ans3"
+            aria-expanded="true"
+          >
+            Question 3
+          </button>
+        </h2>
+
+        <div id="ans3" class="accordion-collapse collapse show" >
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure tempora
+          aliquam quo, id dolor porro iste hic amet, quibusdam et commodi, sit
+          minus? Earum quos, mollitia rerum recusandae ipsum in!
+        </div>
+      </div>
+
+    </div>
+
+    <script src="bootstrap.bundle.js"></script>
+  </body>
+</html>
