@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav id="navbar-example2" class="navbar fixed-top navbar-light bg-light px-3">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link" href="#scrollspyHeading1">First</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#scrollspyHeading2">Second</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            data-bs-toggle="dropdown"
+            href="#"
+            role="button"
+            aria-expanded="false"
+            >Dropdown</a
+          >
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="#scrollspyHeading3">Third</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#scrollspyHeading4">Fourth</a>
+            </li>
+            <li><hr class="dropdown-divider" /></li>
+            <li>
+              <a class="dropdown-item" href="#scrollspyHeading5">Fifth</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div
+      data-bs-spy="scroll"
+      data-bs-target="#navbar-example2"
+      data-bs-offset="0"
+      class="scrollspy-example"
+      tabindex="0"
+    >
+      <h4 id="scrollspyHeading1">First heading</h4>
+      <p>
+        ... Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque
+        voluptatem magni quod similique odit hic suscipit neque voluptates
+        dolorum quam aliquid molestias eligendi ratione, doloribus, nesciunt
+        commodi? Quas, tempora dolorum.
+      </p>
+      <h4 id="scrollspyHeading2">Second heading</h4>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe accusamus
+        odit corporis, error laboriosam itaque magni reprehenderit minima autem?
+        Voluptate iure, minus optio ea voluptates quidem architecto explicabo.
+        Reiciendis, soluta....
+      </p>
+      <h4 id="scrollspyHeading3">Third heading</h4>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe accusamus
+        odit corporis, error laboriosam itaque magni reprehenderit minima autem?
+        Voluptate iure, minus optio ea voluptates quidem architecto explicabo.
+        Reiciendis, soluta....
+      </p>
+      <h4 id="scrollspyHeading4">Fourth heading</h4>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe accusamus
+        odit corporis, error laboriosam itaque magni reprehenderit minima autem?
+        Voluptate iure, minus optio ea voluptates quidem architecto explicabo.
+        Reiciendis, soluta....
+      </p>
+      <h4 id="scrollspyHeading5">Fifth heading</h4>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe accusamus
+        odit corporis, error laboriosam itaque magni reprehenderit minima autem?
+        Voluptate iure, minus optio ea voluptates quidem architecto explicabo.
+        Reiciendis, soluta....
+      </p>
+    </div>
+
+    <!-- 1.use spinner as loaders on webpage load 
+    2.use toast on load - message 
+    3.pagination- link to multiple pages 
+    4. scrollspy
+
+
+    create cards and display data fetched by api url - movies
+    create grid layout and display data fetched by api url - movies
+    try google books api example
+
+-->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
