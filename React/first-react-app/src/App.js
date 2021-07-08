@@ -5,8 +5,12 @@ import Form from "./components/Form"
 import SecondComponent from './components/SecondComponent';
 import StateExample from './components/StateExample';
 import PropsExample from './components/PropsExample';
+import ConditionalRendering from "./components/ConditionalRendering"
+import Login from './components/Login';
+import Logout from './components/Logout';
 
-function App() {
+
+function App(isLoggedIn) {
   return (
     <div className="App">
 
@@ -14,7 +18,7 @@ function App() {
 
 <SecondComponent/> */}
 
-<StateExample/>
+{/* <StateExample/>
 
 <PropsExample name="Sayali"/>
 
@@ -23,7 +27,13 @@ function App() {
 <PropsExample name="Sagar"/>
 
 <PropsExample name="Abhijeet"/>
-<PropsExample name="Sanket"/>
+<PropsExample name="Sanket"/> */}
+
+{/* <Login/>
+
+<Logout/> */}
+
+<ConditionalRendering isLoggedIn = {false}/>
 {/* <Form/> */}
 
      
