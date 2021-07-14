@@ -4,7 +4,7 @@ export default function Form() {
 
 const [FormData, SetFormData] = useState({
     firstName: "",
-    lastName: "bhosale",
+    lastName: "",
     email: "",
     gender: "",
     isActive: false
@@ -13,7 +13,7 @@ const [FormData, SetFormData] = useState({
 const handleInput = (e) => {
 
     SetFormData({...FormData, 
-        //  [e.target.name] :  e.target.value 
+          //[e.target.name] :  e.target.value 
         [e.target.name]:  e.target.type === "checkbox" ? e.target.checked : e.target.value
     })
 
@@ -60,7 +60,8 @@ const handleInput = (e) => {
                 type="radio" 
                 value="female"
                 onChange={handleInput} />
-                <label htmlFor="gender">Female</label>
+                <label htmlFor="gender">Female</label> 
+                <br/>
 
 
                 <label htmlFor="status">Are you Active ?</label>
