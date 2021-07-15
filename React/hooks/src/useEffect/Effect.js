@@ -16,7 +16,7 @@ export default function Effect() {
             console.log(result);
             //setData(result)
         });
-    }, []);
+    }, [count]);
 
     return (
         <div>
