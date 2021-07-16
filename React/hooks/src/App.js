@@ -4,6 +4,8 @@ import Counter from './useState/Counter';
 import Ex from './useState/Ex';
 import Effect from './useEffect/Effect';
 import InputFocus from './useRef/InputFocus';
+import TopRef from './useRef/TopRef';
+import RecipeFinder from './Recipe-Finder-with-hooks/RecipeFinder';
 
 function App() {
   return (
@@ -14,7 +16,11 @@ function App() {
 
       {/* <Effect/> */}
 
-      <InputFocus/>
+      {/* <InputFocus/>
+
+      <TopRef/> */}
+
+      <RecipeFinder/>
     </div>
   );
 }
