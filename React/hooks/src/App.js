@@ -9,6 +9,11 @@ import RecipeFinder from './Recipe-Finder-with-hooks/RecipeFinder';
 import ContextEx from './useContext/ContextEx';
 import Component2 from './useContext/Component2';
 import Toggle from './useContext/Toggle';
+import BookContext from './useContext/BookContextEx/BookContext';
+import AddNewBook from './useContext/BookContextEx/AddNewBook';
+import BookList from './useContext/BookContextEx/BookList';
+import Navbar from './useContext/BookContextEx/Navbar';
+import Book from './useContext/BookContextEx/Book';
 
 function App(props) {
   return (
@@ -27,7 +32,18 @@ function App(props) {
 
      {/* <Component2/> */}
 
-     <Toggle/>
+     {/* <Toggle/> */}
+
+
+     <BookContext>
+       <AddNewBook/>
+       <BookList/>
+       <Book/>
+       <Navbar/>
+     </BookContext>
+
+
+     
 
     </div>
   );
