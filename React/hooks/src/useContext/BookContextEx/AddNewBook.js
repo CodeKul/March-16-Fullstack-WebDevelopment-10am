@@ -1,35 +1,40 @@
-import React, { useContext } from 'react'
-import MyBookContext from "./BookContext"
+import React, { useContext, useState } from 'react'
+import {MyBookContext} from "./BookContext"
+
 
 export default function AddNewBook() {
 
     const [books, setBooks] = useContext(MyBookContext)
 
+    const [bookName, setBookName]= useState("")
+    const [price, setPrice] = useState("")
 
-    const handleInput = (e) =>{
-            setBooks({...books, [e.target.name]: e.target.value })
+
+    const addBook = () => {
+        setBooks((prev) => [...prev, {bookName: bookName, price:price}])
     }
+
+
 
     return (
         <div>
             
 
-            <input 
-            type="text"
-            placeholder="Book Name"
-            name="bookName"
-            value={books.bookName}
-            onChange={handleInput} />
+           <input type="text"
+           placeholder="Book Name" 
+           onChange={(e) => setBookName(e.target.value)}
+           name="bookName"
+           value={books.bookName}
+           />
 
+           <input type="text"
+           placeholder="Book Price"
+           onChange={(e) => setPrice(e.target.value)}
+           name="price"
+           value={books.price} 
+           />
 
-            <input 
-            type="text"
-            placeholder="Book Price"
-            name="price"
-            value={books.price} 
-            onChange={handleInput}/>
-
-            <button>Add new book</button>
+            <button onClick={addBook}>Add new book</button>
         </div>
     )
 }

@@ -1,7 +1,9 @@
-import React, { Children, createContext, useState } from 'react'
+import React, { children, createContext, useState } from 'react'
 
-export default function BookContext() {
-    const MyBookContext = createContext()
+export const MyBookContext = createContext()
+
+export default function BookContext(props) {
+   
 
     const [books, setBooks] = useState([
         {
@@ -18,7 +20,7 @@ export default function BookContext() {
         <div>
             
             <MyBookContext.Provider value={[books, setBooks]}>
-                {Children.props}
+                {props.children}
             </MyBookContext.Provider>
         </div>
     )

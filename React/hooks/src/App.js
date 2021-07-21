@@ -36,7 +36,7 @@ function App(props) {
 
 
      <BookContext>
-       <AddNewBook/>
+       {/* <AddNewBook/> */}
        <BookList/>
        <Book/>
        <Navbar/>

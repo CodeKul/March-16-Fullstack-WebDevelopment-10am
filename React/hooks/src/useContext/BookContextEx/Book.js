@@ -12,8 +12,8 @@ export default function Book({bookName, price}) {
     return (
         <div>
             <li>
-                {books.bookName}
-                {books.price}
+                {bookName}
+                {price}
             </li>
         </div>
     )
