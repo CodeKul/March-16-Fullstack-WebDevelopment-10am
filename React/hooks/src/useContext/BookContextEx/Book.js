@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import MyBookContext from "./BookContext"
+import {MyBookContext} from "./BookContext"
 
 // https://kentcdodds.com/blog/application-state-management-with-react
 // https://www.section.io/engineering-education/dark-mode-for-react-app-using-context-api-and-hooks/

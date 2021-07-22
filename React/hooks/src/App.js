@@ -14,6 +14,8 @@ import AddNewBook from './useContext/BookContextEx/AddNewBook';
 import BookList from './useContext/BookContextEx/BookList';
 import Navbar from './useContext/BookContextEx/Navbar';
 import Book from './useContext/BookContextEx/Book';
+import ContactContext, { MyContactContext } from './useContext/contact-management-context-api-hooks/ContactContext';
+import AddContact from './useContext/contact-management-context-api-hooks/AddContact';
 
 function App(props) {
   return (
@@ -35,12 +37,16 @@ function App(props) {
      {/* <Toggle/> */}
 
 
-     <BookContext>
-       {/* <AddNewBook/> */}
+     {/* <BookContext>
+       <AddNewBook/>
        <BookList/>
        <Book/>
        <Navbar/>
-     </BookContext>
+     </BookContext> */}
+
+     <ContactContext>
+       <AddContact/>
+     </ContactContext>
 
 
      
