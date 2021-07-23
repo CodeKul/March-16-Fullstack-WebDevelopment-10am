@@ -16,8 +16,11 @@ export default function AddContact() {
     
 
     const handleSubmit = (e) => {
-        updatedContacts({...contacts, [e.target.name]:e.target.value })
+        updatedContacts((prev) => [...prev, { name:name, number:number}])
 
+        console.log("contact added", name, number )
+
+        console.log([contacts])
     }
     return (
         <div>
@@ -27,17 +30,21 @@ export default function AddContact() {
             placeholder="Add Name"
             name="name"
             value={contacts.name}
-            onChange={(e)=> {setName({name, [e.target.name]: e.target.value})}}
+            onChange={(e)=> {setName(e.target.value)}}
             />
            
             <input type="text"
             placeholder="Add Number"
             name="number"
             value={contacts.number}
-            onChange={(e)=> {setNumber({number, [e.target.name]: e.target.value})}} />
+            onChange={(e)=> {setNumber(e.target.value)}} />
 
 
             <button onClick={handleSubmit}>Add</button>
+
+
+           
+           
         </div>
     )
 }
