@@ -17,6 +17,7 @@ import Book from './useContext/BookContextEx/Book';
 import ContactContext, { MyContactContext } from './useContext/contact-management-context-api-hooks/ContactContext';
 import AddContact from './useContext/contact-management-context-api-hooks/AddContact';
 import ContactList from './useContext/contact-management-context-api-hooks/ContactList';
+import ReducerCounter from './usereducer/ReducerCounter';
 
 function App(props) {
   return (
@@ -45,11 +46,13 @@ function App(props) {
        <Navbar/>
      </BookContext> */}
 
-     <ContactContext>
+     {/* <ContactContext>
        <AddContact/>
 
        <ContactList/>
-     </ContactContext>
+     </ContactContext> */}
+
+     <ReducerCounter/>
 
 
      
