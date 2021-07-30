@@ -18,6 +18,7 @@ import ContactContext, { MyContactContext } from './useContext/contact-managemen
 import AddContact from './useContext/contact-management-context-api-hooks/AddContact';
 import ContactList from './useContext/contact-management-context-api-hooks/ContactList';
 import ReducerCounter from './usereducer/ReducerCounter';
+import CounterRed from './usereducer/CounterRed';
 
 function App(props) {
   return (
@@ -53,6 +54,8 @@ function App(props) {
      </ContactContext> */}
 
      <ReducerCounter/>
+
+     <CounterRed/>
 
 
      

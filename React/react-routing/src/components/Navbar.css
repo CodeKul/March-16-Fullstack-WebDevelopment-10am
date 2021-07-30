@@ -1,0 +1,24 @@
+nav ul {
+    height: 40px;
+    display: flex;
+    list-style: none;
+    background-color: paleturquoise;
+    align-items: center;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: black;
+    margin-right: 25px;
+    font-weight: 700;
+  }
+  .active {
+    background-color: navy;
+    color: whitesmoke;
+    padding:3px;
+    border-radius: 3px;
+  }
+  nav ul li:hover {
+    cursor: pointer;
+  }
+  

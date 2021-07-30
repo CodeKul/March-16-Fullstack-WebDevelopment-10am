@@ -6,14 +6,14 @@ function reducer(state, action) {
     switch (action.type) {
         case "increment" : 
         
-            return {...state,  state: initialState.count+1};
+            return {  count: state.count+1};
             break;
         
 
         case "decrement": 
-            return {...state,  state: initialState.count-1}
+            return {count: state.count-1}
             break;
-default: return {state: initialState}
+default: return {state}
            
         
     }
@@ -21,20 +21,17 @@ default: return {state: initialState}
 }
 
 
-const initialState = {
-    count: 0,
-
-}
+const count = 0
 
 
 
-export default function ReducerCounter(initialState) {
+export default function ReducerCounter() {
 
-    const [state, dispatch] = useReducer(reducer, initialState)
+    const [state, dispatch] = useReducer(reducer, count)
 
     console.log(state,dispatch)
 
-    console.log(initialState.count)
+    console.log(state)
 
 
     //const [count, setCount] = useState(0)
@@ -47,7 +44,7 @@ export default function ReducerCounter(initialState) {
         <div>
             <h1>Counter with useReducer hooks</h1>
 
-            <h2>Counter : {initialState.count}</h2>
+            <h2>Counter : {state.count}</h2>
 
 
             <button onClick={() => {dispatch({type: "increment"})}}>Increment</button>

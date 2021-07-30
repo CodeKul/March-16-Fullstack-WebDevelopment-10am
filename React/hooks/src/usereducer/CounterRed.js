@@ -47,7 +47,7 @@ export default function CounterRed() {
 
     const [count, sendAction] = useReducer(countReducer, {
         count: 0,
-        incBy: 1});
+        incBy: 5});
 
     
     return (
