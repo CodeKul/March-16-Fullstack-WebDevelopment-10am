@@ -10,6 +10,8 @@ import Header from './components/Header';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import BlogContent from './components/BlogContent';
+import Game from './components/Game';
+import GameResult from './components/GameResult';
 
 
 // https://blog.logrocket.com/the-best-styling-in-react-tutorial-youve-ever-seen-676f1284b945/
@@ -70,6 +72,9 @@ function App() {
       <Route component={BlogContent} path="/blog:topicId"/>
 
       <Route path="/contact" component={Contact}/>
+
+      <Route path="/game" component={Game} />
+      <Route path="/result" component={GameResult}/>
 
 
 

@@ -18,6 +18,8 @@ export default function Navbar() {
                     {/* <li> <Link to="/contact">Contact</Link> </li> */}
 
                     <li> <NavLink to="/contact">Contact</NavLink> </li>
+
+                    <li><NavLink to="/game">Play a Game</NavLink></li>
                 </ul>
             </nav>
         </div>
