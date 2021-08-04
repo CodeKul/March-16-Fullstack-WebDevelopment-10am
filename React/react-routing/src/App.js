@@ -16,6 +16,8 @@ import GameResult from './components/GameResult';
 
 // https://blog.logrocket.com/the-best-styling-in-react-tutorial-youve-ever-seen-676f1284b945/
 
+//what is public routing and private routing
+
 function App() {
 
   let topics = [

@@ -5,7 +5,7 @@ export default function GameResult() {
     const history = useHistory();
 
     const handleClick = () => {
-        history.goBack();
+        history.goBack()
     }
     return (
         <div>

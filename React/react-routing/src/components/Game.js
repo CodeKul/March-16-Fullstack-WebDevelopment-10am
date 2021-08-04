@@ -1,6 +1,6 @@
 import React from 'react'
-import { useHistory } from 'react-router-dom/cjs/react-router-dom.min'
-import { useState } from 'react/cjs/react.production.min'
+import { useHistory } from 'react-router-dom'
+import { useState } from "react"
 
 export default function Game() {
 
