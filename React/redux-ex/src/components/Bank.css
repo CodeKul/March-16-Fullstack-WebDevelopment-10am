@@ -1,0 +1,36 @@
+.btn {
+  padding: 8px;
+  border: none;
+  border: 2px solid rgb(79, 128, 0);
+  color: rgb(0, 128, 107);
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: navy;
+  color: white;
+}
+
+.btn-login:hover{
+    background-color: white;
+    color:navy;
+    border:2px solid navy;
+}
+
+.input-balance {
+  height: 30px;
+  border-radius: 4px;
+  border: 1px solid rgb(0, 128, 17);
+  width: 100%;
+}
+
+.acct-type {
+  padding: 15px;
+  background-color: rgb(167, 189, 223);
+  border: 2px solid navy;
+  border-radius: 5px;
+}
