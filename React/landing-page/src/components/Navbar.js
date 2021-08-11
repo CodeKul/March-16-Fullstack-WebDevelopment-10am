@@ -2,11 +2,13 @@ import React from 'react'
 
 import logo from "../images/logo.webp"
 
+import {Link, NavLink} from "react-router-dom";
+
 export default function Navbar() {
     return (
         <div>
             
-            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+            <nav className="navbar navbar-expand-lg navbar-light bg-transparent">
 
                 <div className="container-fluid">
                 <a className="navbar-brand" href="#">
@@ -25,50 +27,87 @@ export default function Navbar() {
 
                         <ul class="nav navbar-nav mb-2" >
 
-                            <li class="nav-item">
-                                <a class="nav-link">
+                        <li className="nav-item">
+                                <Link className="nav-link" to="/" >
                                         Home
-                                </a>
+                                </Link>
+                                </li>
+                         
+
+
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/about" >
+                                        Industries
+                                </Link>
                             </li>
 
 
                             <li class="nav-item">
-                                <a class="nav-link">
-                                        About
-                                </a>
+                                <Link to="/blog" class="nav-link">
+                                        Blog
+                                </Link>
                             </li>
 
 
-                            <li class="nav-item dropdown" >
-                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+
+                            <li class="nav-item">
+                                <Link to="/contact" class="nav-link">
+                                    How it Works
+                                </Link>
+                            </li>
+
+
+                            <li class="nav-item">
+                                <Link to="/blog" class="nav-link">
+                                        Our Customers
+                                </Link>
+                            </li>
+
+
+
+                            <li class="nav-item">
+                                <Link to="/contact" class="nav-link">
+                                    About Us
+                                </Link>
+                            </li>
+
+                            <li class="nav-item">
+                                <Link to="/contact" class="nav-link">
+                                    Contact Us
+                                </Link>
+                            </li>
+
+
+                            <li className="nav-item dropdown" >
+                                <Link to="/services" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                         Services
-                                </a>
+                                </Link>
 
 
-                                <ul class="dropdown-menu">
+                                <ul className="dropdown-menu">
 
                                 <li>
-                                    <a class="dropdown-item">
+                                    <Link className="dropdown-item">
                                         Service 1
-                                    </a>
+                                    </Link>
                                     </li>
 
                                     <li>
-                                    <a class="dropdown-item">
+                                    <Link className="dropdown-item">
                                         Service 2
-                                    </a>
+                                    </Link>
                                     </li>
 
                                     <li>
-                                    <a class="dropdown-item">
+                                    <Link className="dropdown-item">
                                         Service 3
-                                    </a>
+                                    </Link>
                                     </li>
 
                                     <li>
-                                    <a class="dropdown-item">
+                                    <Link className="dropdown-item">
                                         Service 4
-                                    </a>
+                                    </Link>
                                     </li>
 
                             </ul>
@@ -77,19 +116,10 @@ export default function Navbar() {
 
                             
 
-                            <li class="nav-item">
-                                <a class="nav-link">
-                                        Blog
-                                </a>
-                            </li>
+                           
 
 
-
-                            <li class="nav-item">
-                                <a class="nav-link">
-                                    Contact
-                                </a>
-                            </li>
+                            <li><button className="btn btn-success rounded-pill">Login</button></li>
 
                         </ul>
 
@@ -99,6 +129,10 @@ export default function Navbar() {
               
 
             </nav>
+
+            {/* <Link to="/blog">Blog</Link>
+
+            <NavLink to="/about">About</NavLink> */}
         </div>
     )
 }
