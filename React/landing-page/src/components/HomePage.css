@@ -1,4 +1,45 @@
 .intro-section{
-    background-image: url("../images/work.svg");
+    /* background-image: url("../images/work.svg"); */
+    display: grid;
+    grid-template-columns: 500px 500px;
     height: 400px;
+}
+
+.intro-section img {
+    width: 500px;
+    position: absolute;
+    right: 0;
+}
+
+.intro-section{
+    font-size: xx-large;
+    font-weight: 900;
+}
+
+.features{
+    width: 500px;
+    text-align: center;
+    position: relative;
+    left: 30%;
+}
+
+section h1{
+    font-family: 'Times New Roman', Times, serif;
+
+    color: blue;
+    font-weight: 800;
+}
+
+.reports img{
+    height: 100px;
+    width: 100px;
+}
+
+
+.reports{
+    display: flex;
+}
+
+section p {
+    color: gray;
 }

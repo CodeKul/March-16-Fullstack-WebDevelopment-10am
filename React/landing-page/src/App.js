@@ -16,6 +16,9 @@ import Services from "./components/Services";
 
 // https://dribbble.com/shots/9734357-Greendot-Landing-page
 
+
+// create a landing page with bootstrap - which will have a video playing in the background.
+
 function App() {
   return (
     <div className="App">
